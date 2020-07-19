@@ -8,6 +8,8 @@ from base.unittest2 import TestMath
 from Untill.handle_excel import excel_data
 from base.runMethod import BaseRequest
 from Untill.handle_ini import handle_ini
+from Untill.handle_result import ExpectationResultMoed
+# print(handle_ini.get_value('id','case'))
 class RunMain:
     def run_case(self):
         #获取总行数
@@ -20,7 +22,18 @@ class RunMain:
                 method = data[5]
                 url = data[4]
                 data1 = data[6]
-                BaseRequest.run_main(method,url,data1)
+                res = BaseRequest.run_main(method,url,data1)
+                #code:接口返回的code，message：接口返回的message
+                code = res['errorCode']
+                message = res['errorDesc']
+                #config_message: code_message.json文件中的code对应的message
+                config_message = ExpectationResultMoed.get_message(url,code)
+                # print('url:',url,'code:',code)
+                # print('接口返回的message--------->',message,'json文件中定义的config_messag---------->e',config_message)
+                if message == config_message:
+                    print('case通过')
+                else:
+                    print('case失败')
 
 
 if __name__ == '__main__':

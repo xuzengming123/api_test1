@@ -15,7 +15,7 @@ class HandleInit:
         conf.read(filePath,encoding='utf-8')
         return conf
 
-    def get_value(self,key,node=None):
+    def get_Inivalue(self,key,node=None):
         '''
         获取ini文件的value
         :param key:key
@@ -32,9 +32,9 @@ class HandleInit:
             data = None
         return data
 
+
+
 handle_ini = HandleInit()
-
-
 if __name__ == '__main__':
     handle_ini = HandleInit()
-    print(handle_ini.get_value('host', 'xzm'))
+    print(handle_ini.get_Inivalue('host', 'case'))
