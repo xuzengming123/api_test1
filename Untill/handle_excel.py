@@ -1,7 +1,10 @@
 #coding=utf-8
 
 import openpyxl
-import sys,os
+import sys,os,json
+
+from Untill.handle_ini import handle_ini
+
 CasePath = os.path.abspath('../Case/')
 
 class HandleExcel:
@@ -94,16 +97,22 @@ excel_data = HandleExcel()
 if __name__ == '__main__':
     hdx = HandleExcel()
     #打印加载所有sheet内容
-    print(hdx.get_sheet_data())         #----------<Worksheet "imooc">
+    # print(hdx.get_sheet_data())         #----------<Worksheet "imooc">
     #获取第一行的数据
-    print(hdx.get_rows_value(1))       #---------['case编号', '是否执行', 'url', 'method', 'data', 'cookie操作', '预期结果', 'result']
+    # print(hdx.get_rows_value(1))       #---------['case编号', '是否执行', 'url', 'method', 'data', 'cookie操作', '预期结果', 'result']
     #获取总行数
-    print(hdx.get_rows())              #-----------------4
+    # print(hdx.get_rows())              #-----------------4
     #获取总列数
-    print(hdx.get_columns())              #---------8
+    # print(hdx.get_columns())              #---------8
     #获取第一列的数据
-    print(hdx.get_column_value())       #-----['case编号', 'case_001', None, None]
+    # print(hdx.get_column_value('J'))       #-----['case编号', 'case_001', None, None]
     #获取单元格的数据
-    print(hdx.get_cell_value(1,1))           #case编号
+    print(hdx.get_cell_value(2,10))           #case编号
     #向单元格写入数据
-    print(hdx.excel_wirte_data(3,1,'case_002'))     #写入成功，但是是不会反悔
+    # print(hdx.excel_wirte_data(3,1,'case_002'))     #写入成功，但是是不会反悔
+    # print(type(hdx.get_cell_value(2,10)))
+    # b = json.loads(hdx.get_cell_value(2,10))
+    # print(b)
+    # print(type(b))
+
+

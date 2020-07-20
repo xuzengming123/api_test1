@@ -20,7 +20,10 @@ def get_Jsonvalue(JsonFilePath,key):
     :return: value
     '''
     data = read_json(JsonFilePath)
-    return data.get(key)
+    if key:
+        return data.get(key)
+    else:
+        return None
 
 # DataPath = handle_ini.get_Jsonvalue('user_data','mock')
 # print(get_value(DataPath,'/api3/getbanneradvertver2'))

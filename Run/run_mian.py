@@ -2,7 +2,7 @@
 import time
 import unittest
 from HTMLTestRunner.HTMLTestRunner import HTMLTestRunner
-import os,sys
+import os,sys,json
 from base.unittest1 import SearchTest
 from base.unittest2 import TestMath
 from Untill.handle_excel import excel_data
@@ -22,18 +22,45 @@ class RunMain:
                 method = data[5]
                 url = data[4]
                 data1 = data[6]
+                result_moed = data[8]   #预期结果方式
+                ExpectationResult = data[9] #预期结果
                 res = BaseRequest.run_main(method,url,data1)
                 #code:接口返回的code，message：接口返回的message
                 code = res['errorCode']
                 message = res['errorDesc']
-                #config_message: code_message.json文件中的code对应的message
-                config_message = ExpectationResultMoed.get_message(url,code)
-                # print('url:',url,'code:',code)
-                # print('接口返回的message--------->',message,'json文件中定义的config_messag---------->e',config_message)
-                if message == config_message:
-                    print('case通过')
-                else:
-                    print('case失败')
+                # print(ExpectationResult)
+                if result_moed == 'mec':
+                    # config_message: code_message.json文件中的code对应的message
+                    # config_message = ExpectationResultMoed.get_message(url,code)
+                    #excel_message:从excel中获取code对应的message
+                    excel_message = ExpectationResultMoed.get_excel_message(ExpectationResult,url,code)
+                    # print('url:',url,'code:',code)
+                    # print('接口返回的message--------->',message,'json文件中定义的config_messag---------->e',config_message)
+                    # print('接口返回的message--------->', message, 'excel文件中预期结果---------->', excel_message)
+                    if message == excel_message:
+                        print('case通过')
+                    else:
+                        print('case失败')
+                if result_moed == 'errorcode':
+                    if ExpectationResult == code:
+                        print('case通过')
+                    else:
+                        print('case失败')
+                if result_moed == 'json':
+                    if code == 1000:
+                        status_str = 'sucess'
+                    else:
+                        status_str = 'error'
+                    #通过json文件获取预期结果
+                    excepect_result = ExpectationResultMoed.get_result_from_json(url,status_str)
+                    print(excepect_result)
+                    # print(excepect_result)
+                    #通过excel文件获取预期结果
+                    # excepect_result = ExpectationResultMoed.get_result_from_excel(ExpectationResult,url,status_str)
+                    # 开始校验结果
+                    # result = ExpectationResultMoed.handle_result_json(res,excepect_result)
+                    # print(result)
+
 
 
 if __name__ == '__main__':
