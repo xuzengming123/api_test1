@@ -36,6 +36,23 @@ class HandleExcel:
         data = self.get_sheet_data().max_row
         return data
 
+    def get_rows_number(self,case_id):
+        '''
+        通过case_id获取行号
+        :param case_id:
+        :return:
+        '''
+        num = 1
+        cols_data =self.get_column_value()
+        for col_data in cols_data:
+            if case_id ==col_data:
+                return num
+            num += 1
+        return num
+
+
+
+
     def get_rows_value(self,row):
         '''
         获取某一行的数据

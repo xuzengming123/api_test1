@@ -2,18 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd6a5d4e-5959-42c2-bf3c-cc0bf0c71f9d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Config/cookie.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Config/header.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Untill/handle_cookie.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Untill/handle_header.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Case/imooc.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Case/imooc.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/result.json" beforeDir="false" afterPath="$PROJECT_DIR$/Config/result.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/server.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/server.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Run/run_mian.py" beforeDir="false" afterPath="$PROJECT_DIR$/Run/run_mian.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Untill/handle_json.py" beforeDir="false" afterPath="$PROJECT_DIR$/Untill/handle_json.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Untill/handle_result.py" beforeDir="false" afterPath="$PROJECT_DIR$/Untill/handle_result.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/runMethod.py" beforeDir="false" afterPath="$PROJECT_DIR$/base/runMethod.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Untill/handle_excel.py" beforeDir="false" afterPath="$PROJECT_DIR$/Untill/handle_excel.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -214,7 +205,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595231176787</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="增加handle_header">
+      <created>1595405201397</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1595405201397</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -234,6 +232,7 @@
     <MESSAGE value="慕课网接口自动化" />
     <MESSAGE value="添加" />
     <MESSAGE value="增加从json文件获取预期结果，从excel文件获取预期结果，添加数据验证函数" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加从json文件获取预期结果，从excel文件获取预期结果，添加数据验证函数" />
+    <MESSAGE value="增加handle_header" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加handle_header" />
   </component>
 </project>
