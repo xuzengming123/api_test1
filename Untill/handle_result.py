@@ -106,6 +106,50 @@ class ExpectationResultMoed:
 
 
 if __name__ == '__main__':
-    # print(ExpectationResultMoed.get_result_from_json('api3/newcourseskill','error'))
-    data = excel_data.get_cell_value(5,10)
-    print(ExpectationResultMoed.get_result_from_excel(data,'api3/newcourseskill','error'))
+    # print(ExpectationResultMoed.get_result_from_json('api3/getdownrecommend','error'))
+    data = excel_data.get_cell_value(2,10)
+    print(data)
+    print(ExpectationResultMoed.get_result_from_excel(data,'api3/getbanneradvertver2','error'))
+#     a = {"api3/getdownrecommend":[
+#     {
+#     "sucess":
+#         {
+#             "status":0,
+#             "data":{
+#                 "banner":[
+#                     {
+#                         "id":1709,
+#                         "type":6,
+#                         "type_id":354,
+#                         "name":"Node.js开发仿知乎服务端 深入理解RESTful API",
+#                         "pic":"http://szimg.mukewang.com/5d0ed27508f7d96909000300.jpg",
+#                         "links":""
+#                     }
+#                 ],
+#                 "pic":[
+#                     {
+#                         "pic":"http://www.imooc.com/static/img/andriod/pic/discover_day@3x.png",
+#                         "pic_night":"http://www.imooc.com/static/img/andriod/pic/discover_night@3x.png",
+#                         "type":5
+#                     }
+#                 ]
+#             },
+#             "errorCode":1000,
+#             "errorDesc":"成功",
+#             "timestamp":0
+#         }
+#     },
+#     {
+#     "error":{
+#         "status":0,
+#         "data":"",
+#         "errorCode":1002,
+#         "errorDesc":"失败",
+#         "timestamp":0
+#         }
+#     }
+# ]}
+#     b = {"status": 1, "data": [], "errorCode": 1006, "errorDesc": "token error", "timestamp": 1595238866642}
+#     print(type(a))
+#     print(type(b))
+#     print(ExpectationResultMoed.handle_result_json(a,b))

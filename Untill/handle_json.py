@@ -25,5 +25,19 @@ def get_Jsonvalue(JsonFilePath,key):
     else:
         return None
 
-# DataPath = handle_ini.get_Jsonvalue('user_data','mock')
-# print(get_value(DataPath,'/api3/getbanneradvertver2'))
+def write_value(file_path,data):
+    data_value = json.dumps(data)
+    with open(file_path,'w') as f:
+        f.write(data_value)
+
+if __name__ == '__main__':
+    data = {
+        "app":{
+        "aaaa":"bbbbb"
+        }
+    }
+    write_value()
+
+# DataPath = handle_ini.get_Inivalue('result','mock')
+# print(DataPath)
+# print(get_Jsonvalue(DataPath,'api3/getbanneradvertver2'))

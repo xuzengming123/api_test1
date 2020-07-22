@@ -3,17 +3,26 @@ import requests
 import json
 from Untill.handle_ini import handle_ini
 from Untill.handle_json import get_Jsonvalue
+from Untill.handle_cookie import write_cookie
 
 class BaseRequest:
     @classmethod
     def send_post(cls, url, data,cookie=None,get_cookie=None,header=None):
-        response = requests.post(url=url,data=data,cookies=cookie,headers=header,verify=False)
+        response = requests.post(url=url, data=data, cookies=cookie,headers=header)
+        if get_cookie != None:
+            cookie_value_jar = response.cookies
+            cookie_value = requests.utils.dict_from_cookiejar(cookie_value_jar)
+            write_cookie(cookie_value,get_cookie['is_cookie'])
         res = response.text
         return res
 
     @classmethod
     def send_get(cls, url,data,cookie=None,get_cookie=None,header=None):
         response = requests.get(url=url,params=data,cookies=cookie,headers=header,verify=False)
+        if get_cookie != None:
+            cookie_value_jar = response.cookies
+            cookie_value = requests.utils.dict_from_cookiejar(cookie_value_jar)
+            write_cookie(cookie_value,get_cookie['is_cookie'])
         res = response.text
         return res
 
@@ -36,5 +45,5 @@ class BaseRequest:
             return res
         return res
 
-# res = BaseRequest.run_main('post','http://www.imooc.com/api3/getbanneradvertver2','{"username":"111111"}')
+# res = BaseRequest.run_main('post','http://www.imooc.com/api3/getbanneradvertver2','{"username":"111111"}',get_cookie={"is_cookie":"web"})
 # print(res)
