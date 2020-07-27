@@ -8,8 +8,8 @@
 #写入cookie
 #是否携带
 from Untill.handle_json import get_Jsonvalue,read_json,write_value
-from Untill.handle_ini import handle_ini
-cookie_json_path = handle_ini.get_Inivalue('cookie','mock')
+from Untill.handle_ini import handle_init
+cookie_json_path = handle_init.get_Inivalue('cookie','mock')
 def get_cookie_value(cookie_key):
     '''
     获取到cookie.json中指定的cookie串

@@ -34,7 +34,7 @@ class HandleInit:
 
 
 
-handle_ini = HandleInit()
+handle_init = HandleInit()
 if __name__ == '__main__':
     handle_ini = HandleInit()
     print(handle_ini.get_Inivalue('host', 'case'))

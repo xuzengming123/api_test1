@@ -1,7 +1,7 @@
 #coding=utf-8
 import json
 import os
-from Untill.handle_ini import handle_ini
+from Untill.handle_ini import handle_init
 
 def read_json(JsonFilePath):
     '''

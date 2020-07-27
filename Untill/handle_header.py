@@ -5,9 +5,9 @@
 # @Software: PyCharm
 
 from Untill.handle_json import read_json
-from Untill.handle_ini import handle_ini
+from Untill.handle_ini import handle_init
 
 def get_header():
-    data = read_json(handle_ini.get_Inivalue('header','mock'))
+    data = read_json(handle_init.get_Inivalue('header','mock'))
     return data
 

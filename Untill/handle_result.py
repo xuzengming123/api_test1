@@ -6,7 +6,7 @@
 
 import sys, os, json
 from Untill.handle_json import get_Jsonvalue
-from Untill.handle_ini import handle_ini
+from Untill.handle_ini import handle_init
 from Untill.handle_excel import excel_data
 from deepdiff import DeepDiff
 from Untill.handle_json import get_Jsonvalue
@@ -23,7 +23,7 @@ class ExpectationResultMoed:
         :param code: code值
         :return:
         '''
-        DataPath = handle_ini.get_Inivalue('code_message', 'mock')
+        DataPath = handle_init.get_Inivalue('code_message', 'mock')
         data = get_Jsonvalue(DataPath, key)
         if data is not None:
             for i in data:
@@ -71,7 +71,7 @@ class ExpectationResultMoed:
         :param status: 接口状态
         :return:
         '''
-        DataPath = handle_ini.get_Inivalue('result','mock')
+        DataPath = handle_init.get_Inivalue('result','mock')
         ResultData = get_Jsonvalue(DataPath,url)
 
         if ResultData != None:

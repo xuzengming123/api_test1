@@ -1,7 +1,7 @@
 # coding=utf-8
 import requests
 import json
-from Untill.handle_ini import handle_ini
+from Untill.handle_ini import handle_init
 from Untill.handle_json import get_Jsonvalue
 from Untill.handle_cookie import write_cookie
 
@@ -29,10 +29,10 @@ class BaseRequest:
     @classmethod
     def run_main(cls, method,url,data,cookie=None,get_cookie=None,header=None):
 
-        #这行代码主要是为了模拟返回数据（user_data.json中的数据）
-        # DataPath = handle_ini.get_value('user_data', 'mock')
-        # return get_value(DataPath,url)
-        base_url = handle_ini.get_Inivalue('host','server')
+        #这行代码主要是为了模拟返回数据（user_data.json中的数据,但是不会被抓包抓到）
+        # DataPath = handle_init.get_Inivalue('user_data', 'mock')
+        # return get_Jsonvalue(DataPath,url)
+        base_url = handle_init.get_Inivalue('host','server')
         if 'http' not in url:
             url = base_url + url
         if method == 'get':
