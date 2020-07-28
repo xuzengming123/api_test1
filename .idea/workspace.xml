@@ -2,18 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd6a5d4e-5959-42c2-bf3c-cc0bf0c71f9d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Untill/codition_data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Untill/handle_depend.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Case/imooc.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Case/imooc.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Run/run_mian.py" beforeDir="false" afterPath="$PROJECT_DIR$/Run/run_mian.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Untill/handle_cookie.py" beforeDir="false" afterPath="$PROJECT_DIR$/Untill/handle_cookie.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Untill/codition_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/Untill/codition_data.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Untill/handle_excel.py" beforeDir="false" afterPath="$PROJECT_DIR$/Untill/handle_excel.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Untill/handle_header.py" beforeDir="false" afterPath="$PROJECT_DIR$/Untill/handle_header.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Untill/handle_ini.py" beforeDir="false" afterPath="$PROJECT_DIR$/Untill/handle_ini.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Untill/handle_json.py" beforeDir="false" afterPath="$PROJECT_DIR$/Untill/handle_json.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Untill/handle_result.py" beforeDir="false" afterPath="$PROJECT_DIR$/Untill/handle_result.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/runMethod.py" beforeDir="false" afterPath="$PROJECT_DIR$/base/runMethod.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -59,7 +51,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.codition_data">
+  <component name="RunManager" selected="Python.run_mian">
     <configuration name="codition_data" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="api_test3_owner" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -167,10 +159,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.codition_data" />
         <item itemvalue="Python.run_mian" />
-        <item itemvalue="Python.runMethod" />
+        <item itemvalue="Python.codition_data" />
         <item itemvalue="Python.handle_excel" />
+        <item itemvalue="Python.runMethod" />
         <item itemvalue="Python.handle_header" />
       </list>
     </recent_temporary>
@@ -228,7 +220,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595412143759</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="-U 接入HTMLRunner">
+      <created>1595821805728</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1595821805728</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -250,6 +249,7 @@
     <MESSAGE value="增加从json文件获取预期结果，从excel文件获取预期结果，添加数据验证函数" />
     <MESSAGE value="增加handle_header" />
     <MESSAGE value="增加get_rows_number" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加get_rows_number" />
+    <MESSAGE value="-U 接入HTMLRunner" />
+    <option name="LAST_COMMIT_MESSAGE" value="-U 接入HTMLRunner" />
   </component>
 </project>

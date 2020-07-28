@@ -121,14 +121,14 @@ if __name__ == '__main__':
     # print(hdx.get_columns())              #---------8
     #获取第一列的数据
     # print(hdx.get_column_value('J'))       #-----['case编号', 'case_001', None, None]
-    #获取单元格的数据
-    # print(hdx.get_cell_value(2,10))           #case编号
+    # 获取单元格的数据
+    print(hdx.get_cell_value(6,3))           #case编号
     #向单元格写入数据
     # print(hdx.excel_wirte_data(3,1,'case_002'))     #写入成功，但是是不会反悔
     # print(type(hdx.get_cell_value(2,10)))
     # b = json.loads(hdx.get_cell_value(2,10))
     # print(b)
     # print(type(b))
-    print(hdx.get_rows_number('imooc_003'))
+    # print(hdx.get_rows_number('imooc_003'))
 
 
